@@ -1,0 +1,24 @@
+# Project Outline for Pond Oreille
+
+Actions:
+	Receive input for begin date and end date of desired measurements
+		Need a class to read in the dates and to conform the date provided.
+	Open .txt files in current directory
+	Read from .txt files
+	Sort the information by heading (Date Time AirTemp BaroPres
+	Use statitical methods to analyze the data (Accepts begging date and end date, determine the coefficernt of the slope of barometric pressure)
+		Rising means fair weather, dropping means cold weather
+	Output the change in barometric pressure as a positive or negative.  Maybe display a graph of the charted measurements
+
+Needs:
+	FileReader Class : 
+		Methods:
+			Get names of all .txt files.  
+			Store names of .txt files into property
+			Open each file and read the data from each file
+
+	Data Class or Array?:
+		Store each file into a class or array or could try a map/dictionary? A dictionary could be done by the date with the additional information following?
+			The date would be unique
+	
+	
