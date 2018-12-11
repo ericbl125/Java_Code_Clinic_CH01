@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -67,7 +68,7 @@ public class Main {
                     int match = data.get(beginCount).getDateTime().compareTo(beginLDT);
 
                     if (match > 0) {
-                       // Current position is greater than input.  Move down.
+                        // Current position is greater than input.  Move down.
                         beginHigh = beginCount;
                         beginCount = beginCount - ((beginCount - beginLow) / 2);
                     }
@@ -79,12 +80,9 @@ public class Main {
                     else {
                         begin = true;
                     }
-                    if (beginHigh == beginLow) {
+                    if ((beginCount == beginLow) || (beginCount == beginHigh) ) {
                         // check if the input is higher/lower than the requested spot
-                        if (data.get(beginHigh).getDateTime().compareTo(beginLDT) < 0) {
-                            beginCount++;
-                            begin = true;
-                        }
+                        begin = true;
                     }
                 }
                 if (!end) {
@@ -101,18 +99,24 @@ public class Main {
                     else {
                         end = true;
                     }
-                    if (endHigh == endLow) {
+                    if ((endCount == endHigh) || (endCount == endLow)) {
                         // check if the input is higher/lower than the requested spot
-                        if (data.get(endHigh).getDateTime().compareTo(endLDT) > 0) {
-                            endCount--;
-                            end = true;
-                        }
+                        end = true;
                     }
                 }
-                System.out.println("Begin Index: " + beginCount + "\t" + "End Index: " + endCount);
+                // System.out.println("Begin Index: " + beginCount + "\t" + "End Index: " + endCount);
+            }
+            List<WeatherEntry> measureDates = data.subList(beginCount, endCount);
+
+            // TODO: loop through measureDates to calculate barometric pressure
+            // x axis is time series
+            // y axis is barometric pressure
+            // 1 is oldest data point 2 is the newest
+            // m = y2 - y1 / x2-x1
+            for (WeatherEntry date : measureDates) {
+                date.getBaroPress();
             }
 
-            // Calculate the barometric trend over the period
 
 
         } catch (IOException e) {
