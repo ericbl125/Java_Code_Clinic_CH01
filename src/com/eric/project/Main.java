@@ -1,13 +1,17 @@
 package com.eric.project;
 
-import java.io.*;
-import java.time.LocalDate;
+import org.apache.commons.math3.stat.regression.SimpleRegression;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -56,9 +60,6 @@ public class Main {
             int endCount = data.size()/2;
             int beginLow = 0, endLow = 0;
             int beginHigh = data.size(), endHigh = data.size();
-
-            System.out.println(data.get(beginCount).getDateTime().compareTo(beginLDT));
-            System.out.println(data.get(beginCount).getDateTime());
 
             // The recorded times most likely wont match the requested times.  Need to find the
             //      best possible match to the closest times.  Otherwise this will loop forever
@@ -113,10 +114,14 @@ public class Main {
             // y axis is barometric pressure
             // 1 is oldest data point 2 is the newest
             // m = y2 - y1 / x2-x1
+
+            SimpleRegression sr = new SimpleRegression();
+            int count = 1;
             for (WeatherEntry date : measureDates) {
-                date.getBaroPress();
+                sr.addData(count++,date.getBaroPress());
             }
 
+            System.out.println(sr.getSlope());
 
 
         } catch (IOException e) {
