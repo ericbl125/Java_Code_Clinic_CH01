@@ -32,7 +32,7 @@ public class Main {
       //  LocalDateTime endLDT = LocalDateTime.parse(dates[1], parser);
 
         LocalDateTime beginLDT = LocalDateTime.parse("2012-01-01 00:02:21", parser);
-        LocalDateTime endLDT = LocalDateTime.parse("2012-01-02 00:15:43", parser);
+        LocalDateTime endLDT = LocalDateTime.parse("2012-01-01 05:15:43", parser);
 
 
         System.out.println(beginLDT + "; " + endLDT);
@@ -107,9 +107,12 @@ public class Main {
                 }
                 // System.out.println("Begin Index: " + beginCount + "\t" + "End Index: " + endCount);
             }
-            List<WeatherEntry> measureDates = data.subList(beginCount, endCount);
 
-            // TODO: loop through measureDates to calculate barometric pressure
+            System.out.println("Begin Date: " + data.get(beginCount).getDateTime() + "\t" + "End Index: " + data.get(endCount).getDateTime());
+
+            //List<WeatherEntry> measureDates = data.subList(beginCount, endCount);
+            List<WeatherEntry> measureDates = data;
+
             // x axis is time series
             // y axis is barometric pressure
             // 1 is oldest data point 2 is the newest
