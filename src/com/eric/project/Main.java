@@ -100,7 +100,6 @@ public class Main {
                         end = true;
                     }
                 }
-                // System.out.println("Begin Index: " + beginCount + "\t" + "End Index: " + endCount);
             }
 
             System.out.println("Begin Date: " + data.get(beginCount).getDateTime() + "\t" + "End Index: " + data.get(endCount).getDateTime());
@@ -121,11 +120,9 @@ public class Main {
 
             System.out.println(sr.getSlope());
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private static String[] getInput() {

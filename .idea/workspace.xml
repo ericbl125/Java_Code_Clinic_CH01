@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../CH01/src/com/eric/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH01/src/com/eric/project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CH01/src/com/eric/project/WeatherEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CH01/src/com/eric/project/WeatherEntry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CH01/com/eric/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CH01/com/eric/project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CH01/com/eric/project/WeatherEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CH01/com/eric/project/WeatherEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/eric/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eric/project/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eric/project/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="123" column="56" lean-forward="true" selection-start-line="123" selection-start-column="56" selection-end-line="123" selection-end-column="56" />
+            <state relative-caret-position="221">
+              <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Environmental_Data_Deep_Moor_2012.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="73" lean-forward="true" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+            <state relative-caret-position="254">
+              <caret line="46159" selection-start-line="46159" selection-end-line="46159" />
             </state>
           </provider>
         </entry>
@@ -195,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544731027871</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Math Jar file.  Implemented the SimpleRegression to calculate the slope.">
+      <created>1544765670840</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544765670840</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed code causing warnings within Intellij">
+      <created>1544765840676</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544765840676</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -263,7 +274,8 @@
     <MESSAGE value="Finished Binary search" />
     <MESSAGE value="Changed data types from String to Double" />
     <MESSAGE value="Added Math Jar file.  Implemented the SimpleRegression to calculate the slope." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Math Jar file.  Implemented the SimpleRegression to calculate the slope." />
+    <MESSAGE value="Removed code causing warnings within Intellij" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed code causing warnings within Intellij" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -321,20 +333,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Environmental_Data_Deep_Moor_2012.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="73" lean-forward="true" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eric/project/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="123" column="56" lean-forward="true" selection-start-line="123" selection-start-column="56" selection-end-line="123" selection-end-column="56" />
+        <state relative-caret-position="221">
+          <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Environmental_Data_Deep_Moor_2012.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="46159" selection-start-line="46159" selection-end-line="46159" />
         </state>
       </provider>
     </entry>
