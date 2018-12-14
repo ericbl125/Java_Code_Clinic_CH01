@@ -8,15 +8,13 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
 
 public class Main {
 
-    static ArrayList<WeatherEntry> data = new ArrayList<WeatherEntry>();
-    static HashMap<LocalDateTime, WeatherEntry> mapData = new HashMap<>();
+    private static ArrayList<WeatherEntry> data = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -41,7 +39,6 @@ public class Main {
         String curDir = System.getProperty("user.dir");
         TextFile txt = new TextFile(curDir);
         String strFiles = txt.getAsString();
-        String[] files = strFiles.split(TextFile.getDelimiter());
         try {
             for(int i=0; i<txt.getFiles().length; i++) {
                 BufferedReader reader = new BufferedReader(new FileReader(txt.getFiles()[i]));
@@ -50,7 +47,6 @@ public class Main {
                     String[] lineData = line.split("\t");
                     WeatherEntry newEntry = new WeatherEntry(lineData);
                     data.add(newEntry);
-                    mapData.put(newEntry.getDateTime(), newEntry);
                 }
             }
 
@@ -87,7 +83,6 @@ public class Main {
                     }
                 }
                 if (!end) {
-                    int ret = data.get(endCount).getDateTime().compareTo(endLDT);
 
                     if (data.get(endCount).getDateTime().compareTo(endLDT) > 0) {
                         endHigh = endCount;
